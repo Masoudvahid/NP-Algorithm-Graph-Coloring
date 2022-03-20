@@ -7,10 +7,10 @@ There are approximate algorithms to solve the problem though.
 The following pictures will show the concept of graph coloring
 
  * Chromatic = 4
-<img src="https://miro.medium.com/max/1400/1*RepNCTGsjs0SxeVPSzjguA.png">
+<img src="https://miro.medium.com/max/1400/1*RepNCTGsjs0SxeVPSzjguA.png" width="300">
 
  * Chromatic = 2
-<img src="https://miro.medium.com/max/1400/1*CypxIsqimS2lSje756LaYQ.png">
+<img src="https://miro.medium.com/max/1400/1*CypxIsqimS2lSje756LaYQ.png" width="300">
  
 ***
 
@@ -30,7 +30,7 @@ way of representing a graph G= (V, E) on n = |V| vertices,
 labeled 1, 2, …., n, is by using an n by n matrix.
 
 for example:
-<img src="https://miro.medium.com/max/1400/1*NrZ7eQOxHxD5B2Li4Di7AQ.jpeg">  
+<img src="https://miro.medium.com/max/1400/1*NrZ7eQOxHxD5B2Li4Di7AQ.jpeg" width="300">  
 
 ***Algorithm***
 1. Find all the symmetric edges in one representation of (i, j) and (j, i).
@@ -39,7 +39,7 @@ for example:
 on that vertex if the color is the same as the current vertex and adjacent 
 vertex. If the colors are the same, then change the color.
 Like the following picture:
-<img src="https://miro.medium.com/max/1400/1*E8XiagfQoD1_Kb2d-bTPSA.jpeg">  
+<img src="https://miro.medium.com/max/1400/1*E8XiagfQoD1_Kb2d-bTPSA.jpeg" width="300">  
 
 
 <!-- https://antiguadominic.medium.com/graph-coloring-adjacency-matrix-discrete-math-problem-8bf98295e0d0 -->
