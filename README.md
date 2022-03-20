@@ -30,6 +30,7 @@ way of representing a graph G= (V, E) on n = |V| vertices,
 labeled 1, 2, …., n, is by using an n by n matrix.
 
 for example:
+
 <img src="https://miro.medium.com/max/1400/1*NrZ7eQOxHxD5B2Li4Di7AQ.jpeg" width="300">  
 
 ***Algorithm***
