@@ -12,7 +12,7 @@ The following pictures will show the concept of graph coloring
  * Chromatic = 2
 <img src="https://miro.medium.com/max/1400/1*CypxIsqimS2lSje756LaYQ.png" width="300">
  
-***
+
 
 ##Algorithms for coloring a graph
 There exists some ways for solving this problem  
