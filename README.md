@@ -16,16 +16,16 @@ The following pictures will show the concept of graph coloring
  
 ***
 
-##Algorithms for coloring a graph
+## Algorithms for coloring a graph
 There exists some ways for solving this problem  
 
-###Greedy Algorithm  
+### Greedy Algorithm  
 even though it doesn’t guarantee to use minimum colors,
 but it guarantees an upper bound on the number of colors. 
 The basic algorithm never uses more than d+1 colors where d
 is the maximum degree of a vertex in the given graph.
 
-###adjacency matrix
+### Adjacency matrix
 ***what is adjacency matrix?***  
 The Adjacency matrix is a simple and straightforward
 way of representing a graph G= (V, E) on n = |V| vertices,
