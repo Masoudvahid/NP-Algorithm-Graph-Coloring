@@ -16,7 +16,7 @@ The following pictures will show the concept of graph coloring
  
 ***
 
-Algorithms for coloring a graph
+##Algorithms for coloring a graph
 There exists some ways for solving this problem  
 
 ###Greedy Algorithm  
