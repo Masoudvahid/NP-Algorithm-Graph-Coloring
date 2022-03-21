@@ -6,7 +6,14 @@ There are approximate algorithms to solve the problem though.
 
 The following pictures will show the concept of graph coloring
 
+ * Chromatic = 4
 
+<img src="https://miro.medium.com/max/1400/1*RepNCTGsjs0SxeVPSzjguA.png" width="300">
+
+ * Chromatic = 2
+
+<img src="https://miro.medium.com/max/1400/1*CypxIsqimS2lSje756LaYQ.png" width="300">
+ 
 ***
 
 ##Algorithms for coloring a graph
