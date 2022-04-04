@@ -40,8 +40,7 @@ basic algorithm never uses more than `d+1` colors where d is the maximum degree 
 ### Adjacency matrix
 
 ***what is adjacency matrix?***  
-The Adjacency matrix is a simple and straightforward
-way of representing a graph `G= (V, E)` on `n = |V|` 
+The Adjacency matrix is a simple and straightforward way of representing a graph `G= (V, E)` on `n = |V|`
 vertices, labeled
 `1, 2, …, n` is by using an n by n matrix.
 
@@ -61,4 +60,6 @@ for example:
 
 
 <!-- https://antiguadominic.medium.com/graph-coloring-adjacency-matrix-discrete-math-problem-8bf98295e0d0 -->
-
+<!-- Brute force algorithm: https://martin-thoma.com/vertex-coloring/ -->
+<!-- Greedy algorithm: https://www.geeksforgeeks.org/graph-coloring-set-2-greedy-algorithm/ -->
+<!-- Greedy algorithm (used): https://www.techiedelight.com/greedy-coloring-graph/ -->
