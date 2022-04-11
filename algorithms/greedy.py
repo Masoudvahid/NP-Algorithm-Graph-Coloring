@@ -1,3 +1,5 @@
+from algorithms.headers import *
+
 class Graph:
     def __init__(self, edges, numebr_of_nodes):
         self.adjList = [[] for _ in range(numebr_of_nodes)]
@@ -21,19 +23,24 @@ def greedy(graph, number_of_nodes):
                 break
             color = color + 1
         vertex_color_list[vertex_index] = color
-    for v in range(number_of_nodes):
-        print(f'Color assigned to vertex {v} is {colors[vertex_color_list[v]]}')
-
-
-colors = ['', 'BLUE', 'GREEN', 'RED', 'YELLOW', 'ORANGE', 'PINK',
-          'BLACK', 'BROWN', 'WHITE', 'PURPLE', 'VOILET']
-
-edges = [(0, 1), (0, 4), (0, 5), (4, 5), (1, 4), (1, 3), (2, 3), (2, 4)]
+        used_colors = ["white"]
+    for vertex in range(number_of_nodes):
+        used_colors.append(colors[vertex_color_list[vertex]])
+        print(f'Color assigned to vertex {vertex} is {used_colors[vertex]}')
+    return used_colors
 
 number_of_nodes = 6
+edges = [(0, 1), (0, 4), (0, 5), (4, 5), (1, 4), (1, 3), (2, 3), (2, 4)]
 
 # build a graph from the given edges
 graph = Graph(edges, number_of_nodes)
 
 # Perform greedy algorithm on the given graph
-greedy(graph, number_of_nodes)
+color  = greedy(graph, number_of_nodes)
+
+# Draw the graph
+G = nx.Graph()
+G.add_node(6)
+G.add_edges_from(edges)
+nx.draw(G, node_color=color)
+plt.show()
