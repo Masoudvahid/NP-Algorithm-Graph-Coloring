@@ -63,3 +63,4 @@ for example:
 <!-- Brute force algorithm: https://martin-thoma.com/vertex-coloring/ -->
 <!-- Greedy algorithm: https://www.geeksforgeeks.org/graph-coloring-set-2-greedy-algorithm/ -->
 <!-- Greedy algorithm (used): https://www.techiedelight.com/greedy-coloring-graph/ -->
+<!-- Unit testing: https://docs.python.org/3/library/unittest.html -->
