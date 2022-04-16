@@ -41,9 +41,14 @@ class brute_force:
                 return possible_choice
 
         color = []
+
+        print("Coloring the graph using brute force algorithm.\n")
         for possible_choice in all_possible_choices:
             if iterate_over_all_edges(possible_choice) != None:
                 color.append(iterate_over_all_edges(possible_choice))
+
+        for index, used_color in enumerate(color[0]):
+            print(f'Color assigned to vertex {index} is {used_color}')
         return color
 
     def draw_graph(self):
