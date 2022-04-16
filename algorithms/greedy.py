@@ -11,13 +11,13 @@ class Graph:
 
 
 class greedy_algorithm:
-    edges: int
-    number_of_nodes: list()
-    color: list()
+    number_of_nodes: int
+    edges: []
+    color: []
 
-    def __init__(self, numebr_of_nodes, edges):
+    def __init__(self, number_of_nodes, edges):
         self.edges = edges
-        self.number_of_nodes = numebr_of_nodes
+        self.number_of_nodes = number_of_nodes
 
     def greedy(self, graph):
         vertex_color_list = {}
