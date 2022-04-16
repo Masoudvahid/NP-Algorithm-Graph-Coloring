@@ -1,6 +1,4 @@
 import itertools
-import cardinality
-
 from algorithms.headers import *
 
 
@@ -22,46 +20,44 @@ class brute_force:
         self.edges = edges
         self.number_of_nodes = number_of_nodes
 
-    def brute_force(self, graph):
-        # colors_list = list(range(1, self.number_of_nodes + 1))
+    def brute_force(self):
         colors_list = colors[:self.number_of_nodes]
         # Generate all possible combinations of colors for every node
         all_possible_choices = list(itertools.product(colors_list, repeat=self.number_of_nodes))
 
         def iterate_over_all_edges(possible_choice):
-            index = 0
             for edge_i in self.edges:
                 if possible_choice[edge_i[0]] == possible_choice[edge_i[1]]:
                     return
-                index += 1
-                for edge_j in self.edges[index:]:
+            starting_index = 0
+            for edge_i in self.edges:
+                starting_index += 1
+                for edge_j in self.edges[starting_index:]:
+                    if possible_choice[edge_i[0]] == possible_choice[edge_i[1]]:
+                        return
                     if possible_choice[edge_i[0]] == possible_choice[edge_j[1]] or \
                             possible_choice[edge_i[1]] == possible_choice[edge_j[1]]:
                         return
                 return possible_choice
 
-        color = []
-
         print("Coloring the graph using brute force algorithm.\n")
-        for possible_choice in all_possible_choices:
-            if iterate_over_all_edges(possible_choice) != None:
-                color.append(iterate_over_all_edges(possible_choice))
-
-        for index, used_color in enumerate(color[0]):
+        proper_colors = [i for i in set(map(iterate_over_all_edges, all_possible_choices)) if i]
+        minimum_color_choice = tuple(map(lambda string: (string, len(set(string))), proper_colors))
+        minimum_color_choice = dict(map(reversed, minimum_color_choice))
+        best_color_choice = minimum_color_choice[min(minimum_color_choice.keys())]
+        for index, used_color in enumerate(best_color_choice):
             print(f'Color assigned to vertex {index} is {used_color}')
-        return color
+        return best_color_choice
 
     def draw_graph(self):
         G = nx.Graph()
         G.add_node(self.number_of_nodes - 1)
         G.add_edges_from(self.edges)
-        nx.draw(G, node_color=color[1], with_labels=True)
+        nx.draw_kamada_kawai(G, nodelist=list(range(self.number_of_nodes)), node_color=brute_force.color,
+                             with_labels=True)
         plt.show()
 
-    def perform_brute_force_algorith(self):
-        # build a graph from the given edges
-        graph = Graph(self.edges, self.number_of_nodes)
-
-        # Perform greedy algorithm on the given graph
-        global color
-        color = self.brute_force(graph)
+    def perform_brute_force_algorithm(self):
+        # Perform brute force on the given graph
+        brute_force.color = self.brute_force()
+        return brute_force.color

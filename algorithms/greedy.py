@@ -44,13 +44,11 @@ class greedy_algorithm:
         G = nx.Graph()
         G.add_node(self.number_of_nodes - 1)
         G.add_edges_from(self.edges)
-        nx.draw(G, node_color=color, with_labels=True)
+        nx.draw(G, node_color=greedy_algorithm.color, with_labels=True)
         plt.show()
 
     def perform_greedy_algorith(self):
         # build a graph from the given edges
         graph = Graph(self.edges, self.number_of_nodes)
-
         # Perform greedy algorithm on the given graph
-        global color
-        color = self.greedy(graph)
+        greedy_algorithm.color = self.greedy(graph)

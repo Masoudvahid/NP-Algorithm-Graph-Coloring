@@ -2,12 +2,16 @@ import tkinter as tk
 from tkinter import *
 import ast
 import time
-from struct import pack, unpack
 
 import algorithms.greedy as gr
 import algorithms.backtracking as bt
 import algorithms.brute_force as bf
 
+###### start testing ######
+# import tests.testing as test
+###### testing finished ######
+
+"""
 window = tk.Tk()
 
 # Label for number of nodes
@@ -15,6 +19,8 @@ var = StringVar()
 label = Label(window, textvariable=var)
 var.set("Number of nodes:")
 label.pack()
+
+number_of_nodes = None
 
 
 def get_vertex_count():
@@ -44,7 +50,7 @@ def get_edges():
     # Brute force algorithm
     start_time = time.time()
     brute_force = bf.brute_force(number_of_nodes, edges)
-    brute_force.perform_brute_force_algorith()
+    brute_force.perform_brute_force_algorithm()
     brute_force.draw_graph()
     print("--- %s seconds ---\n\n" % (time.time() - start_time))
     get_adj_matrix()
@@ -82,17 +88,20 @@ btn.pack()
 window.title('Graph coloring')
 window.geometry("300x250+10+10")
 window.mainloop()
+"""
 
 """
 # Greedy algorithm presentation
-# number_of_nodes = 6
-# edges = [(0, 1), (0, 4), (0, 5), (4, 5), (1, 4), (1, 3), (2, 3), (2, 4)]
-number_of_nodes = 4
-edges = [(0, 1), (1, 2), (2, 0), (2, 3)]
+number_of_nodes = 6
+edges = [(0, 1), (0, 4), (0, 5), (4, 5), (1, 4), (1, 3), (2, 3), (2, 4)]
+# number_of_nodes = 4
+# edges = [(0, 1), (1, 2), (2, 0), (2, 3)]
 greedy = gr.greedy_algorithm(number_of_nodes, edges)
 greedy.perform_greedy_algorith()
 greedy.draw_graph()
+"""
 
+"""
 # Backtracking algorithm presentation
 number_of_nodes = 6
 adj_matrix = [[0, 1, 0, 0, 1, 1],
@@ -106,11 +115,14 @@ backtracking = bt.backtracking_algorithm(number_of_nodes, adj_matrix, backtrack_
 backtracking.backtracking()
 backtracking.draw_graph()
 """
-"""
+
+# """
 # Brute force method client code
-number_of_nodes = 6
-edges = [(0, 1), (0, 4), (0, 5), (4, 5), (1, 4), (1, 3), (2, 3), (2, 4)]
+# number_of_nodes = 6
+# edges = [(0, 1), (0, 4), (0, 5), (1, 4), (1, 3), (2, 3), (2, 4), (4, 5)]
+number_of_nodes = 4
+edges = [(0, 1), (0, 2), (1, 2), (2, 3)]
 brute_force = bf.brute_force(number_of_nodes, edges)
-brute_force.perform_brute_force_algorith()
+brute_force.perform_brute_force_algorithm()
 brute_force.draw_graph()
-"""
+# """
