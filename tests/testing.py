@@ -23,11 +23,8 @@ class graph_coloring_Tests(unittest.TestCase):
         self.backtracking = bc.backtracking_algorithm
         self.greedy = gr.greedy_algorithm
 
-    def brute_force_testing(self):
+    def test_brute_force_testing(self):
         bb = self.brute_force(number_of_nodes, edges)
         ans = bb.perform_brute_force_algorithm()
         should_be = """('aliceblue', 'antiquewhite', 'aliceblue', 'aqua', 'aqua', 'aqua')"""
         self.assertEqual(ans, should_be)
-
-
-unittest.main()

@@ -41,6 +41,7 @@ class brute_force:
                 return possible_choice
 
         print("Coloring the graph using brute force algorithm.\n")
+        print(len(all_possible_choices))
         proper_colors = [i for i in set(map(iterate_over_all_edges, all_possible_choices)) if i]
         minimum_color_choice = tuple(map(lambda string: (string, len(set(string))), proper_colors))
         minimum_color_choice = dict(map(reversed, minimum_color_choice))
