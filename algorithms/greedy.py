@@ -52,3 +52,4 @@ class greedy_algorithm:
         graph = Graph(self.edges, self.number_of_nodes)
         # Perform greedy algorithm on the given graph
         greedy_algorithm.color = self.greedy(graph)
+        return greedy_algorithm.color

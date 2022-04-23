@@ -1,18 +1,11 @@
 import tkinter as tk
 from tkinter import *
 import ast
+from tests.program_testing import *
 
-###### Testing started ######
+perform_tests(runtime=0, unittest=1)
 
-# Runtime testing
-# import tests.runtime
-# Functionality
-import tests.testing as test
-test.unittest.main(module=test)
-###### Testing finished ######
-
-
-"""
+# """
 window = tk.Tk()
 
 # Label for number of nodes
@@ -84,9 +77,7 @@ btn = tk.Button(window, height=1, width=10, text="Read", command=get_edges)
 btn.pack()
 
 # Backtracking algorithm presentation
-
-
 window.title('Graph coloring')
 window.geometry("300x250+10+10")
 window.mainloop()
-"""
+# """

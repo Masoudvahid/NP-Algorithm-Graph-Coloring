@@ -37,7 +37,7 @@ class backtracking_algorithm:
         for vertex, color in zip(range(self.vertices), colors_id):
             self.used_colors.append(colors[color])
             print(f'Color assigned to vertex {vertex} is {self.used_colors[vertex]}')
-        return True
+        return self.used_colors
 
     def draw_graph(self):
         G = nx.from_numpy_array(np.array(self.adj_matrix))
