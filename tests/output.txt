@@ -9,7 +9,7 @@ Color assigned to vertex 3 is antiquewhite
 Color assigned to vertex 4 is aqua
 Color assigned to vertex 5 is antiquewhite
 Color assigned to vertex 6 is aqua
---- 0.0 seconds for 7 elements ---
+--- 5.949998740106821e-05 seconds for 7 elements ---
 
 Coloring the graph using greedy algorithm.
 
@@ -19,7 +19,7 @@ Color assigned to vertex 2 is antiquewhite
 Color assigned to vertex 3 is aquamarine
 Color assigned to vertex 4 is aquamarine
 Color assigned to vertex 5 is aqua
---- 0.0 seconds for 6 elements ---
+--- 4.039995837956667e-05 seconds for 6 elements ---
 
 Coloring the graph using greedy algorithm.
 
@@ -27,7 +27,7 @@ Color assigned to vertex 0 is antiquewhite
 Color assigned to vertex 1 is aqua
 Color assigned to vertex 2 is antiquewhite
 Color assigned to vertex 3 is aqua
---- 0.0 seconds for 4 elements ---
+--- 2.7399975806474686e-05 seconds for 4 elements ---
 
 
 
@@ -42,7 +42,7 @@ Color assigned to vertex 3 is antiquewhite
 Color assigned to vertex 4 is aqua
 Color assigned to vertex 5 is antiquewhite
 Color assigned to vertex 6 is aqua
---- 0.0 seconds for 7 elements ---
+--- 5.4999953135848045e-05 seconds for 7 elements ---
 
 Coloring the graph using backtracking algorithm.
 
@@ -52,7 +52,7 @@ Color assigned to vertex 2 is antiquewhite
 Color assigned to vertex 3 is aquamarine
 Color assigned to vertex 4 is aquamarine
 Color assigned to vertex 5 is aqua
---- 0.0 seconds for 6 elements ---
+--- 4.840001929551363e-05 seconds for 6 elements ---
 
 Coloring the graph using backtracking algorithm.
 
@@ -60,7 +60,7 @@ Color assigned to vertex 0 is antiquewhite
 Color assigned to vertex 1 is aqua
 Color assigned to vertex 2 is antiquewhite
 Color assigned to vertex 3 is aqua
---- 0.0 seconds for 4 elements ---
+--- 2.7400092221796513e-05 seconds for 4 elements ---
 
 
 
@@ -68,49 +68,30 @@ Brute force method presentation
 
 Coloring the graph using brute force algorithm.
 
-823543
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aquamarine
-Color assigned to vertex 2 is azure
-Color assigned to vertex 3 is azure
-Color assigned to vertex 4 is aliceblue
-Color assigned to vertex 5 is azure
+Color assigned to vertex 0 is beige
+Color assigned to vertex 1 is bisque
+Color assigned to vertex 2 is aliceblue
+Color assigned to vertex 3 is aliceblue
+Color assigned to vertex 4 is azure
+Color assigned to vertex 5 is aliceblue
 Color assigned to vertex 6 is azure
---- 0.6873493194580078 seconds for 7 elements ---
+--- 1.5342642000177875 seconds for 7 elements ---
 
 Coloring the graph using brute force algorithm.
 
-46656
-Color assigned to vertex 0 is azure
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is azure
-Color assigned to vertex 3 is aquamarine
-Color assigned to vertex 4 is aquamarine
-Color assigned to vertex 5 is beige
---- 0.031203269958496094 seconds for 6 elements ---
-
-Coloring the graph using brute force algorithm.
-
-256
 Color assigned to vertex 0 is aliceblue
-Color assigned to vertex 1 is aquamarine
+Color assigned to vertex 1 is aqua
+Color assigned to vertex 2 is aqua
+Color assigned to vertex 3 is beige
+Color assigned to vertex 4 is beige
+Color assigned to vertex 5 is antiquewhite
+--- 0.07182499999180436 seconds for 6 elements ---
+
+Coloring the graph using brute force algorithm.
+
+Color assigned to vertex 0 is aquamarine
+Color assigned to vertex 1 is aliceblue
 Color assigned to vertex 2 is antiquewhite
 Color assigned to vertex 3 is aqua
---- 0.0 seconds for 4 elements ---
+--- 0.00031939998734742403 seconds for 4 elements ---
 
-Coloring the graph using backtracking algorithm.
-
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aquamarine
-Color assigned to vertex 4 is aquamarine
-Color assigned to vertex 5 is aqua
-Coloring the graph using greedy algorithm.
-
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aquamarine
-Color assigned to vertex 4 is aquamarine
-Color assigned to vertex 5 is aqua

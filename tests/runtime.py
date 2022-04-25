@@ -1,5 +1,5 @@
 import sys
-import time
+from timeit import default_timer as time
 import algorithms.greedy as gr
 import algorithms.backtracking as bt
 import algorithms.brute_force as bf
@@ -42,10 +42,10 @@ def perform_runtime_test():
     # Greedy algorithm presentation
     print("Greedy algorithm presentation\n")
     for index, edges in enumerate(adjacency_list_input):
-        start_time = time.time()
+        start_time = time()
         greedy = gr.greedy_algorithm(number_of_nodes[index], edges)
         greedy.perform_greedy_algorith()
-        print(f"--- %s seconds for {number_of_nodes[index]} elements ---\n" % (time.time() - start_time))
+        print(f"--- %s seconds for {number_of_nodes[index]} elements ---\n" % (time() - start_time))
     # """
     print("\n")
     # """
@@ -53,18 +53,18 @@ def perform_runtime_test():
     print("Backtracking algorithm presentation\n")
     backtrack_value = 3
     for index, edges in enumerate(adjacency_matrix_input):
-        start_time = time.time()
+        start_time = time()
         backtracking = bt.backtracking_algorithm(number_of_nodes[index], edges, backtrack_value)
         backtracking.backtracking()
-        print(f"--- %s seconds for {number_of_nodes[index]} elements ---\n" % (time.time() - start_time))
+        print(f"--- %s seconds for {number_of_nodes[index]} elements ---\n" % (time() - start_time))
     # """
     print("\n")
     # """
     # Brute force method client code
     print("Brute force method presentation\n")
     for index, edges in enumerate(adjacency_list_input):
-        start_time = time.time()
+        start_time = time()
         brute_force = bf.brute_force(number_of_nodes[index], edges)
         brute_force.perform_brute_force_algorithm()
-        print(f"--- {(time.time() - start_time)} seconds for {number_of_nodes[index]} elements ---\n")
+        print(f"--- {(time() - start_time)} seconds for {number_of_nodes[index]} elements ---\n")
     # """

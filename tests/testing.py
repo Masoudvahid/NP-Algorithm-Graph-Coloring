@@ -20,20 +20,17 @@ class graph_coloring_Tests(unittest.TestCase):
         self.backtracking = bc.backtracking_algorithm
         self.greedy = gr.greedy_algorithm
 
-    # def test_brute_force_testing(self):
-    #     bb = self.brute_force(number_of_nodes, edges)
-    #     ans = bb.perform_brute_force_algorithm()
-    #     should_be = """('azure', 'aliceblue', 'aliceblue', 'beige', 'aqua', 'beige')"""
-    #     self.assertEqual(ans, should_be)
+    def test_algorithms(self):
+        # Getting minimum number of colors using brute force
+        bb = self.brute_force(number_of_nodes, edges)
+        answer = len(bb.perform_brute_force_algorithm())
 
-    def test_greedy(self):
+        # Compare greedy algorithm with brute force
         greedy = self.greedy(number_of_nodes, edges)
-        ans = greedy.perform_greedy_algorith()
-        should_be = ['antiquewhite', 'aqua', 'antiquewhite', 'aquamarine', 'aquamarine', 'aqua']
-        self.assertEqual(ans, should_be)
+        result = len(greedy.perform_greedy_algorith())
+        self.assertEqual(result, answer)
 
-    def test_back_tracking(self):
+        # Compare back_tracking algorithm with brute force
         back_tracking = self.backtracking(number_of_nodes, adj_matrix, 3)
-        ans = back_tracking.backtracking()
-        should_be = ['antiquewhite', 'aqua', 'antiquewhite', 'aquamarine', 'aquamarine', 'aqua']
-        self.assertEqual(ans, should_be)
+        result = len(back_tracking.backtracking())
+        self.assertEqual(result, answer)
