@@ -11,6 +11,7 @@ adj_matrix = [[0, 1, 0, 0, 1, 1],
               [0, 1, 1, 0, 0, 0],
               [1, 1, 1, 0, 0, 1],
               [1, 0, 0, 0, 1, 0]]
+
 FAILURE = 'Incorrect result'
 
 
@@ -31,6 +32,6 @@ class graph_coloring_Tests(unittest.TestCase):
         self.assertEqual(result, answer)
 
         # Compare back_tracking algorithm with brute force
-        back_tracking = self.backtracking(number_of_nodes, adj_matrix, 3)
+        back_tracking = self.backtracking(number_of_nodes, edges, 3)
         result = len(back_tracking.backtracking())
         self.assertEqual(result, answer)

@@ -1,10 +1,21 @@
 from algorithms.headers import *
 
 
+def convert_to_adj_matrix(adj_vector, number_of_vertices):
+    # Initialize a matrix
+    matrix = [[0 for j in range(number_of_vertices)]
+              for i in range(number_of_vertices)]
+    for column, row in adj_vector:
+        matrix[row][column] = 1
+        matrix[column][row] = 1
+    return matrix
+
+
 class backtracking_algorithm:
-    def __init__(self, vertices, adj_matrix, backtrack_value):
+
+    def __init__(self, vertices, adj_vector, backtrack_value):
         self.vertices = vertices
-        self.adj_matrix = adj_matrix
+        self.adj_matrix = convert_to_adj_matrix(adj_vector, vertices)
         self.backtrack_value = backtrack_value
         self.used_colors = list()
 

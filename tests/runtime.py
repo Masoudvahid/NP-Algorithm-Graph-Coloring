@@ -52,7 +52,7 @@ def perform_runtime_test():
     # Backtracking algorithm presentation
     print("Backtracking algorithm presentation\n")
     backtrack_value = 3
-    for index, edges in enumerate(adjacency_matrix_input):
+    for index, edges in enumerate(adjacency_list_input):
         start_time = time()
         backtracking = bt.backtracking_algorithm(number_of_nodes[index], edges, backtrack_value)
         backtracking.backtracking()

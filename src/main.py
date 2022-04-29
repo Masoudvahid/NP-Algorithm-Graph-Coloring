@@ -1,6 +1,9 @@
+import random
 import tkinter as tk
 from tkinter import *
 import ast
+import networkx as nx
+
 from tests.program_testing import *
 
 perform_tests(runtime=0, unittest=0)
@@ -13,7 +16,6 @@ var = StringVar()
 label = Label(window, textvariable=var)
 var.set("Number of nodes:")
 label.pack()
-
 number_of_nodes = None
 
 
@@ -25,16 +27,33 @@ def get_vertex_count():
 vertex_count_tb = tk.Entry(window, width=40)
 vertex_count_tb.pack(pady=10)
 
-# Label for adjacency list
+# Label for adjacency vector
 var = StringVar()
 label = Label(window, textvariable=var)
-var.set("Enter adjacency list:")
+var.set("adjacency vector:")
 label.pack()
 
 
 def get_edges():
-    edges = ast.literal_eval(edge_tb.get())
-    get_vertex_count()
+    global number_of_nodes
+    if vertex_count_tb.get() == "":
+        # Generate graph if no graph was provided
+        number_of_nodes = random.choice(range(3, 7))
+        connect_edges_probability = 0.5
+        graph = nx.gnp_random_graph(number_of_nodes, connect_edges_probability)
+        edges = list(graph.edges)
+        print(number_of_nodes)
+        print(edges)
+        print(type(edges))
+
+    else:
+        # Consider the input as graph
+        edges = ast.literal_eval(edge_tb.get())
+        get_vertex_count()
+        print(number_of_nodes)
+        print(edges)
+        print(type(edges))
+
     # Greedy algorithm
     start_time = time()
     greedy = gr.greedy_algorithm(number_of_nodes, edges)
@@ -47,31 +66,17 @@ def get_edges():
     brute_force.perform_brute_force_algorithm()
     brute_force.draw_graph()
     print("--- %s seconds ---\n\n" % (time() - start_time))
-    get_adj_matrix()
-
-
-edge_tb = tk.Entry(window, width=40)
-edge_tb.pack(pady=10)
-
-# Label for adjacency list
-var = StringVar()
-label = Label(window, textvariable=var)
-var.set("enter adjacency matrix:")
-label.pack()
-
-
-def get_adj_matrix():
-    adj_matrix = ast.literal_eval(adj_matrix_tb.get())
+    # back_tracking algorithm
     backtrack_value = 3
     start_time = time()
-    backtracking = bt.backtracking_algorithm(number_of_nodes, adj_matrix, backtrack_value)
+    backtracking = bt.backtracking_algorithm(number_of_nodes, edges, backtrack_value)
     backtracking.backtracking()
     backtracking.draw_graph()
     print("--- %s seconds ---\n\n   " % (time() - start_time))
 
 
-adj_matrix_tb = tk.Entry(window, width=40)
-adj_matrix_tb.pack(pady=10)
+edge_tb = tk.Entry(window, width=40)
+edge_tb.pack(pady=10)
 
 btn = tk.Button(window, height=1, width=10, text="Read", command=get_edges)
 btn.pack()
