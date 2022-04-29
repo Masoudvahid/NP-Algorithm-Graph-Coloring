@@ -1,97 +1,28 @@
+Brute force method presentation
+
+--- 0.7112396000002263 seconds for 7 elements ---
+
+--- 0.03837759999987611 seconds for 6 elements ---
+
+--- 0.00015520000033575343 seconds for 4 elements ---
+
+
+
 Greedy algorithm presentation
 
-Coloring the graph using greedy algorithm.
+--- 2.2399999579647556e-05 seconds for 7 elements ---
 
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is aquamarine
-Color assigned to vertex 3 is antiquewhite
-Color assigned to vertex 4 is aqua
-Color assigned to vertex 5 is antiquewhite
-Color assigned to vertex 6 is aqua
---- 5.949998740106821e-05 seconds for 7 elements ---
+--- 1.0099999599333387e-05 seconds for 6 elements ---
 
-Coloring the graph using greedy algorithm.
-
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aquamarine
-Color assigned to vertex 4 is aquamarine
-Color assigned to vertex 5 is aqua
---- 4.039995837956667e-05 seconds for 6 elements ---
-
-Coloring the graph using greedy algorithm.
-
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aqua
---- 2.7399975806474686e-05 seconds for 4 elements ---
+--- 5.9000003602704965e-06 seconds for 4 elements ---
 
 
 
 Backtracking algorithm presentation
 
-Coloring the graph using backtracking algorithm.
+--- 2.4199999643315095e-05 seconds for 7 elements ---
 
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is aquamarine
-Color assigned to vertex 3 is antiquewhite
-Color assigned to vertex 4 is aqua
-Color assigned to vertex 5 is antiquewhite
-Color assigned to vertex 6 is aqua
---- 5.4999953135848045e-05 seconds for 7 elements ---
+--- 1.7299999854003545e-05 seconds for 6 elements ---
 
-Coloring the graph using backtracking algorithm.
-
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aquamarine
-Color assigned to vertex 4 is aquamarine
-Color assigned to vertex 5 is aqua
---- 4.840001929551363e-05 seconds for 6 elements ---
-
-Coloring the graph using backtracking algorithm.
-
-Color assigned to vertex 0 is antiquewhite
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aqua
---- 2.7400092221796513e-05 seconds for 4 elements ---
-
-
-
-Brute force method presentation
-
-Coloring the graph using brute force algorithm.
-
-Color assigned to vertex 0 is beige
-Color assigned to vertex 1 is bisque
-Color assigned to vertex 2 is aliceblue
-Color assigned to vertex 3 is aliceblue
-Color assigned to vertex 4 is azure
-Color assigned to vertex 5 is aliceblue
-Color assigned to vertex 6 is azure
---- 1.5342642000177875 seconds for 7 elements ---
-
-Coloring the graph using brute force algorithm.
-
-Color assigned to vertex 0 is aliceblue
-Color assigned to vertex 1 is aqua
-Color assigned to vertex 2 is aqua
-Color assigned to vertex 3 is beige
-Color assigned to vertex 4 is beige
-Color assigned to vertex 5 is antiquewhite
---- 0.07182499999180436 seconds for 6 elements ---
-
-Coloring the graph using brute force algorithm.
-
-Color assigned to vertex 0 is aquamarine
-Color assigned to vertex 1 is aliceblue
-Color assigned to vertex 2 is antiquewhite
-Color assigned to vertex 3 is aqua
---- 0.00031939998734742403 seconds for 4 elements ---
+--- 8.50000014906982e-06 seconds for 4 elements ---
 

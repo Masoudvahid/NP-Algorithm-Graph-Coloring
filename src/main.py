@@ -5,8 +5,8 @@ import ast
 import networkx as nx
 
 from tests.program_testing import *
+perform_tests(runtime=1, unittest=0)
 
-perform_tests(runtime=0, unittest=0)
 
 # """
 window = tk.Tk()
@@ -42,17 +42,11 @@ def get_edges():
         connect_edges_probability = 0.5
         graph = nx.gnp_random_graph(number_of_nodes, connect_edges_probability)
         edges = list(graph.edges)
-        print(number_of_nodes)
-        print(edges)
-        print(type(edges))
 
     else:
         # Consider the input as graph
         edges = ast.literal_eval(edge_tb.get())
         get_vertex_count()
-        print(number_of_nodes)
-        print(edges)
-        print(type(edges))
 
     # Greedy algorithm
     start_time = time()

@@ -20,7 +20,7 @@ class brute_force:
         self.edges = edges
         self.number_of_nodes = number_of_nodes
 
-    def brute_force(self):
+    def brute_force(self, for_test=0):
         colors_list = colors[:self.number_of_nodes]
         # Generate all possible combinations of colors for every node
         all_possible_choices = list(itertools.product(colors_list, repeat=self.number_of_nodes))
@@ -40,13 +40,15 @@ class brute_force:
                         return
                 return possible_choice
 
-        print("Coloring the graph using brute force algorithm.\n")
+        if for_test == 0:
+            print("Coloring the graph using brute force algorithm.\n")
         proper_colors = [i for i in set(map(iterate_over_all_edges, all_possible_choices)) if i]
         minimum_color_choice = tuple(map(lambda string: (string, len(set(string))), proper_colors))
         minimum_color_choice = dict(map(reversed, minimum_color_choice))
         best_color_choice = minimum_color_choice[min(minimum_color_choice.keys())]
         for index, used_color in enumerate(best_color_choice):
-            print(f'Color assigned to vertex {index} is {used_color}')
+            if for_test == 0:
+                print(f'Color assigned to vertex {index} is {used_color}')
         return best_color_choice
 
     def draw_graph(self):
@@ -57,7 +59,7 @@ class brute_force:
                              with_labels=True)
         plt.show()
 
-    def perform_brute_force_algorithm(self):
+    def perform_brute_force_algorithm(self, for_test=0):
         # Perform brute force on the given graph
-        brute_force.color = self.brute_force()
+        brute_force.color = self.brute_force(for_test=for_test)
         return brute_force.color

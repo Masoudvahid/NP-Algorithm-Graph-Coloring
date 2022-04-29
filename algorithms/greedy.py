@@ -19,7 +19,7 @@ class greedy_algorithm:
         self.edges = edges
         self.number_of_nodes = number_of_nodes
 
-    def greedy(self, graph):
+    def greedy(self, graph, for_test=0):
         vertex_color_list = {}
 
         # assign a color to vertex one by one
@@ -34,10 +34,12 @@ class greedy_algorithm:
                 color = color + 1
             vertex_color_list[vertex_index] = color
             used_colors = []
-        print("Coloring the graph using greedy algorithm.\n")
+        if for_test == 0:
+            print("Coloring the graph using greedy algorithm.\n")
         for vertex in range(self.number_of_nodes):
             used_colors.append(colors[vertex_color_list[vertex]])
-            print(f'Color assigned to vertex {vertex} is {used_colors[vertex]}')
+            if for_test == 0:
+                print(f'Color assigned to vertex {vertex} is {used_colors[vertex]}')
         return used_colors
 
     def draw_graph(self):
@@ -47,9 +49,9 @@ class greedy_algorithm:
         nx.draw(G, node_color=greedy_algorithm.color, with_labels=True)
         plt.show()
 
-    def perform_greedy_algorith(self):
+    def perform_greedy_algorith(self, for_test=0):
         # build a graph from the given edges
         graph = Graph(self.edges, self.number_of_nodes)
         # Perform greedy algorithm on the given graph
-        greedy_algorithm.color = self.greedy(graph)
+        greedy_algorithm.color = self.greedy(graph, for_test=for_test)
         return greedy_algorithm.color

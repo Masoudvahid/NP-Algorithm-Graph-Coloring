@@ -38,16 +38,18 @@ class backtracking_algorithm:
                     return True
                 colors[vertices] = 0
 
-    def backtracking(self):
+    def backtracking(self, for_test=0):
         colors_id = [0] * self.vertices
         if self.graph_colour_helper(self.backtrack_value, colors_id, 0) is None:
             return False
 
         # Print the solution
-        print("Coloring the graph using backtracking algorithm.\n")
+        if for_test == 0:
+            print("Coloring the graph using backtracking algorithm.\n")
         for vertex, color in zip(range(self.vertices), colors_id):
             self.used_colors.append(colors[color])
-            print(f'Color assigned to vertex {vertex} is {self.used_colors[vertex]}')
+            if for_test == 0:
+                print(f'Color assigned to vertex {vertex} is {self.used_colors[vertex]}')
         return self.used_colors
 
     def draw_graph(self):
