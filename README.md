@@ -1,5 +1,7 @@
 # NP-algorithm-Graph-Coloring
 
+The [link](https://docs.google.com/presentation/d/1y5D5cJ1ctTmsnBY9Rhks5-0PRu-fyPzuQgIR9ihUhiQ/edit?usp=sharing) to the presentation
+
 The problem to find chromatic number of a given graph is `NP Complete`.  
 Actually, there is no efficient algorithm available for coloring a graph with minimum number of colors as the problem is
 a known NP Complete problem There are approximate algorithms to solve the problem though.
